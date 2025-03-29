@@ -24,8 +24,6 @@ export default function App() {
 }
 
 function Accordion({ data }) {
-const [curOpen, setisOpen] = useState(null);
-
   return (
     <div className="accordion">
       {data.map((el, i) => (
@@ -36,6 +34,8 @@ const [curOpen, setisOpen] = useState(null);
 }
 
 function AccordionItem({ num, title, text }) {
+  const [isOpen, setIsOpen] = useState(false);
+
 function handleToggle() {
   setIsOpen(isOpen => !isOpen);
 }
